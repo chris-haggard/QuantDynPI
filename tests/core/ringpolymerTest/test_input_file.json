@@ -1,0 +1,36 @@
+{
+	"simulation": {
+		"type": "TRPMD",
+		"init_file": "input/init_water_big.xyz",
+		"box_length": 33.7314,
+    "initial_therm_length" : 1000.0,
+    "therm_length" : 300.0,
+    "run_length" : 3000.0,
+    "trajectories" : 10,
+    "stride" : 8
+	},
+	"ring-polymer": {
+		"beads": 32,
+    "atoms" : 3,
+		"molecules": 32,
+    "gamma" : 16.0
+	},
+	"ensemble": {
+		"T": 300.0
+	},
+  "thermostat": {
+    "seed" : 1.0,
+    "thermostat_centroid_in_dynamics" : false,
+    "PILE" : {
+      "lambda" : 0.5,
+      "tau0" : 100,
+      "quasi_tau0": 100.0
+    }
+  },
+	"potential": {
+		"type": "gas-qtip"
+	},
+	"dynamics": {
+		"dt": 0.015625
+	}
+}

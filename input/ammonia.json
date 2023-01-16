@@ -1,0 +1,36 @@
+{
+	"simulation": {
+		"type": "TRPMD",
+		"init_file": "/home/ch850/Documents/qdac/input/init_ammonia_HHHN_4beads.xyz",
+		"box_length": 33.7314,
+    "initial_therm_length" : 1500.0,
+    "therm_length" : 200.0,
+    "run_length" : 2500.0,
+    "trajectories" :1,
+    "stride" : 1
+	},
+	"ring-polymer": {
+		"beads": 4,
+    "atoms" : 4,
+		"molecules": 1,
+    "gamma" : 16.0
+	},
+	"ensemble": {
+		"T": 300.0
+	},
+	"thermostat": {
+    "seed" : 5.0,
+    "thermostat_centroid_in_dynamics" : false,
+    "PILE" : {
+		  "lambda": 0.5,
+		  "tau0": 100.0,
+      "quasi_tau0": 100.0
+    }
+	},
+	"potential": {
+		"type": "gas-ammonia"
+	},
+	"dynamics": {
+		"dt": 0.025
+	}
+}
