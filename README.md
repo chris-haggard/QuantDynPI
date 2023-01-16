@@ -1,15 +1,20 @@
 # QuantDynPI
 
-Path-integral quantum dynamics simulations package. Capable of performing: (Thermostatted) Ring-Polymer Molecular Dynamics, Centroid MD, Quasi-centroid MD.
+Path-integral quantum dynamics simulations package. Capable of performing: (Thermostatted) Ring-Polymer Molecular Dynamics ((T)RPMD), Centroid MD (CMD), Quasi-centroid MD (QCMD).
 ***
 
 ## Background
 
-Nuclear quantum effects, such as zero-point energy and tunnelling, are immportant to account for in many condensed-phase systems. By using the path-integral fomulation of quantum mechanics the quantum Boltzmann operator (the QM operator the governs the thermal statistics of a system) can be discretised and reformulated classically. These classical simulations are carried out in the extended phase space of the ring-polymer, a harmonically connected system of replicas of the original classical system. 
+[Nuclear quantum effects](https://www.nature.com/articles/s41570-017-0109), such as zero-point energy and tunnelling, are important to account for in many condensed-phase systems. By using the path-integral fomulation of quantum mechanics the quantum Boltzmann operator (the QM operator the governs the thermal statistics of a system) can be discretised and reformulated classically. These classical simulations are carried out in the extended phase space of the ring-polymer, a harmonically connected system of replicas of the original classical system. 
 
-A variety of methods exist in the quantum statistics-classical mechanics space. This package implements the two most popular methods, TRPMD and CMD, and the newer QCMD method. The focus of this software is producing dipole autocorrelation functions, and by extension, infrared spectra. This can be used to probe the dyanamics of system, and whether the chosen methods faithfully replicates the underlying physics.
+A variety of methods exist in the quantum statistics-classical mechanics space. This package implements the two most popular methods, [(T)RPMD](https://aip.scitation.org/doi/10.1063/1.1777575) and [CMD](https://aip.scitation.org/doi/10.1063/1.467175), and the newer [QCMD](https://aip.scitation.org/doi/10.1063/1.5100587) method. The focus of this software is producing dipole autocorrelation functions, and by extension, infrared spectra. This can be used to probe the dyanamics of system, and whether the chosen methods faithfully replicates the underlying physics.
 
 This package implements the above methods. The only requirement is to specify and input file, examples can be found in the ```input``` directory. The package uses MPI to spawn simulations with different random number seeds. These simultions are then averaged to produce a final TCF with errors.
+
+This package can be used to generate the data for the following papers:
+
+- [Improved torque estimator for condensed-phase quasicentroid molecular dynamics](https://aip.scitation.org/doi/10.1063/5.0129482)
+- [Testing the quasicentroid molecular dynamics method on gas-phase ammonia](https://aip.scitation.org/doi/10.1063/5.0068250)
 
 ### Requirements
 
