@@ -13,8 +13,8 @@ This package implements the above methods. The only requirement is to specify an
 
 This package can be used to generate the data for the following papers:
 
-- [Improved torque estimator for condensed-phase quasicentroid molecular dynamics](https://aip.scitation.org/doi/10.1063/5.0129482)
-- [Testing the quasicentroid molecular dynamics method on gas-phase ammonia](https://aip.scitation.org/doi/10.1063/5.0068250)
+- [George Trenins, Christopher Haggard, and Stuart C. Althorpe, "Improved torque estimator for condensed-phase quasicentroid molecular dynamics", J. Chem. Phys. 157, 174108 (2022)](https://aip.scitation.org/doi/10.1063/5.0129482)
+- [Christopher Haggard, Vijay Ganesh Sadhasivam, George Trenins, and Stuart C. Althorpe, "Testing the quasicentroid molecular dynamics method on gas-phase ammonia", J. Chem. Phys. 155, 174120 (2021)](https://aip.scitation.org/doi/10.1063/5.0068250)
 
 ### Requirements
 
