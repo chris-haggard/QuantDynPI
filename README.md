@@ -5,11 +5,11 @@ Path-integral quantum dynamics simulations package. Capable of performing: (Ther
 
 ## Background
 
-[Nuclear quantum effects](https://www.nature.com/articles/s41570-017-0109), such as zero-point energy and tunnelling, are important to account for in many condensed-phase systems. By using the path-integral fomulation of quantum mechanics the quantum Boltzmann operator (the QM operator the governs the thermal statistics of a system) can be discretised and reformulated classically. These classical simulations are carried out in the extended phase space of the ring-polymer, a harmonically connected system of replicas of the original classical system. 
+[Nuclear quantum effects](https://www.nature.com/articles/s41570-017-0109), such as zero-point energy and tunnelling, are important to account for in many condensed-phase systems. By using the path-integral formulation of quantum mechanics the quantum Boltzmann operator (the QM operator the governs the thermal statistics of a system) can be discretised and reformulated classically. These classical simulations are carried out in the extended phase space of the ring-polymer, a harmonically connected system of replicas of the original classical system. 
 
-A variety of methods exist in the quantum statistics-classical mechanics space. This package implements the two most popular methods, [(T)RPMD](https://aip.scitation.org/doi/10.1063/1.1777575) and [CMD](https://aip.scitation.org/doi/10.1063/1.467175), and the newer [QCMD](https://aip.scitation.org/doi/10.1063/1.5100587) method. The focus of this software is producing dipole autocorrelation functions, and by extension, infrared spectra. This can be used to probe the dyanamics of system, and whether the chosen methods faithfully replicates the underlying physics.
+A variety of methods exist in the quantum statistics-classical mechanics space. This package implements the two most popular methods, [(T)RPMD](https://aip.scitation.org/doi/10.1063/1.1777575) and [CMD](https://aip.scitation.org/doi/10.1063/1.467175), and the newer [QCMD](https://aip.scitation.org/doi/10.1063/1.5100587) method. The focus of this software is producing dipole autocorrelation functions, and by extension, infrared spectra. This can be used to probe the dynamics of system, and whether the chosen methods faithfully replicates the underlying physics.
 
-This package implements the above methods. The only requirement is to specify and input file, examples can be found in the ```input``` directory. The package uses MPI to spawn simulations with different random number seeds. These simultions are then averaged to produce a final TCF with errors.
+This package implements the above methods. The only requirement is to specify and input file, examples can be found in the ```input``` directory. The package uses MPI to spawn simulations with different random number seeds. These simulations are then averaged to produce a final TCF with errors.
 
 This package can be used to generate the data for the following papers:
 
@@ -67,7 +67,7 @@ bt
 ```
 
 #### Input file
-- Gamma must be specified. It has no effect for (T)RPMD/Classical. A gamma of <0.0 will mean CMD/QCMD will not be adaibatically separated (for grid based calculations)
+- Gamma must be specified. It has no effect for (T)RPMD/Classical. A gamma of <0.0 will mean CMD/QCMD will not be adiabatically separated (for grid based calculations)
 
 #### Adding a test
 
@@ -80,5 +80,5 @@ Generate docs with ```doxygen Doxyfile```.
 #### Common causes of error
 
 - The path to the init file in the input json must be absolute and not include ~ etc.
-- Propagation is done entirely in normal modes. The cartesian representations are rarely up to date. The cartesian positions are only guaranteed to be up to date at the end of each step. The momenta are rarely up to date.
+- Propagation is done entirely in normal modes. The Cartesian representations are rarely up to date. The Cartesian positions are only guaranteed to be up to date at the end of each step. The momenta are rarely up to date.
 - QCMD timestep is dependent on gamma (and therefore the number of beads), and must be quite low
